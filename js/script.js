@@ -5,3 +5,4 @@ toggle.addEventListener("click", () => {
   toggle.classList.toggle("open");
   navigation.classList.toggle("active");
 });
+
