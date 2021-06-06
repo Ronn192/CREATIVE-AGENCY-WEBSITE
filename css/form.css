@@ -1,10 +1,14 @@
 section.formSection {
-    background: rgb(74,84,84);
-background: linear-gradient(0deg, rgba(74,84,84,1) 0%, rgba(156,166,166,1) 65%, rgba(255,255,255,1) 100%);
-    height: 100%;
-    padding-bottom: 5%;
+  background: rgb(74, 84, 84);
+  background: linear-gradient(
+    0deg,
+    rgba(74, 84, 84, 1) 0%,
+    rgba(156, 166, 166, 1) 65%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  height: 100%;
+  padding-bottom: 5%;
 }
-
 
 .contact {
   position: relative;
@@ -20,7 +24,8 @@ background: linear-gradient(0deg, rgba(74,84,84,1) 0%, rgba(156,166,166,1) 65%, 
   background: #f1efef;
   width: calc(100% - 400px);
   padding: 60px 40px 20px;
-  border-radius: 15px;
+  border-radius: 10px;
+  box-shadow: top 15px;
 }
 
 .contact-form form {
@@ -53,13 +58,13 @@ background: linear-gradient(0deg, rgba(74,84,84,1) 0%, rgba(156,166,166,1) 65%, 
   outline: none;
   font-size: 16px;
   font-weight: 300;
-  margin: 10px 0;
+  margin: 5px 0 10px;
   resize: none;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .contact-form .row textarea {
-  height: 150px;
+  height: 120px;
 }
 
 .contact-form .row input[type="submit"] {
@@ -73,6 +78,7 @@ background: linear-gradient(0deg, rgba(74,84,84,1) 0%, rgba(156,166,166,1) 65%, 
   cursor: pointer;
   border-radius: 0.375rem;
   width: 33%;
+  margin-top: 1rem;
 }
 
 .contact-info {
