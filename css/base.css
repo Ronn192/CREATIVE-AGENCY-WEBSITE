@@ -10,6 +10,11 @@
     font-family: "Poppins", sans-serif;
     color: #111;
   }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
   
   header {
     height: 60px;
@@ -126,6 +131,16 @@
     animation: fadeInRight 0.5s ease forwards;
     -webkit-animation-delay: 0.35s;
     animation-delay: 0.35s;
+  }
+
+  .navigation .actualRoute {
+    font-size: 2.2rem;
+    color: #111;
+    text-decoration: none;
+    font-weight: 300;
+    position: relative;
+    font-weight: bold;
+    color: red;
   }
   
   .navigation ul li a {
