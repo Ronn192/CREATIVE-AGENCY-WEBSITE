@@ -84,25 +84,39 @@ section.formSection {
 .contact-info {
   width: 350px;
   background: #f1efef;
-  padding: 60px 40px 20px;
+  padding: 40px 30px;
   border-radius: 15px;
 }
 
 .contact-info .info-box {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-areas:
+    "icon iconName"
+    "icon text";
+  grid-template-rows: 1fr;
+  grid-template-columns: 0.35fr 1fr;
+  gap: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .contact-info .info-box .contact-icon {
-  width: 20px;
+  width: 25px;
   margin-right: 40px;
+  grid-area: icon;
+  margin: 0 auto;
+  align-self: center;
 }
 
 .contact-info .info-box .details h4 {
   color: var(--secondary-color);
+  grid-area: iconName;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .contact-info .info-box .details p,
 .contact-info .info-box .details a {
   color: #111;
+  grid-area: text;
+  margin: 0;
 }
