@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url(./menu.css);
 
 :root {
   --primary-color: #f60f20;
@@ -6,27 +7,29 @@
 }
 
 /* BASE STYLES*/
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
-  font-family: 'Poppins', sans-serif;
+html,
+body {
+  font-family: "Poppins", sans-serif;
   color: #111;
 }
 
 header {
   height: 60px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 0.5rem;
 }
 
 h1 {
- font-size:30px;
- font-weight: 500;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 p {
@@ -35,9 +38,10 @@ p {
 }
 
 section {
-  display: flex;
   flex-direction: column;
-  height: 100vh;
+  margin-top: 0;
+  display: flex;
+  height: calc(100vh - 120px);
   align-items: center;
   padding: 100px;
   margin-top: 60px;
@@ -51,11 +55,11 @@ section.home {
 /*BUTTON*/
 .btn {
   cursor: pointer;
-  display:inline-block;
+  display: inline-block;
   background: var(--primary-color);
   color: #fff;
   text-decoration: none;
-  padding:10px 30px;
+  padding: 10px 30px;
   margin: 20px 0;
   border: 0;
 }
@@ -78,7 +82,7 @@ section.home {
   width: 60px;
   height: 60px;
   background: var(--primary-color) url(/images/menu.png);
-  background-size: 30px;;
+  background-size: 30px;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 20;
@@ -98,26 +102,38 @@ section.home {
   top: 0;
   left: 100%;
   width: 100%;
-  height: 100%;
+  height: 20%;
   background-color: #fff;
   z-index: 15;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
 }
 
 .navigation.active {
   left: 0;
+  opacity: 0.9;
+  visibility: visible;
+  height: 100%;
 }
 
 .navigation ul {
   position: relative;
 }
 
-.navigation ul li{
+.navigation ul li {
   position: relative;
   list-style: none;
   text-align: center;
+  -webkit-animation: fadeInRight 0.5s ease forwards;
+  animation: fadeInRight 0.5s ease forwards;
+  -webkit-animation-delay: 0.35s;
+  animation-delay: 0.35s;
 }
 
 .navigation ul li a {
@@ -143,7 +159,7 @@ section.home {
 }
 
 .navigation .social-bar {
-  display:inline-block;
+  display: inline-block;
   transform: scale(0.5);
 }
 
@@ -152,7 +168,6 @@ section.home {
   bottom: 20px;
   transform: scale(0.5);
 }
-
 
 /*HOMEPAGE*/
 .home-content {
@@ -171,11 +186,11 @@ section.home {
   height: 110%;
 }
 
-.index__title{
+.index__title {
   line-height: 40px;
 }
 
-.index__title > span{
+.index__title > span {
   color: red;
 }
 
@@ -214,7 +229,7 @@ section.home {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .portfolio .item {
@@ -222,12 +237,11 @@ section.home {
   width: 300px;
   height: 300px;
   margin: 5px;
- 
 }
 
-.portfolio .item img{
+.portfolio .item img {
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 .portfolio .item .action {
@@ -245,10 +259,10 @@ section.home {
 }
 
 .portfolio .item:hover .action {
-  opacity: 1
+  opacity: 1;
 }
 
-.portfolio .item .action a{
+.portfolio .item .action a {
   display: inline-block;
   color: #fff;
   text-decoration: none;
@@ -259,12 +273,12 @@ section.home {
 /* CONTACT*/
 
 .contact {
- position: relative;
- width: 100%;
- margin-top: 50px;
- display: flex;
- justify-content: space-between;
- align-items: flex-start;
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .contact-form {
@@ -288,10 +302,10 @@ section.home {
   margin: 0 10px;
 }
 
-.contact-form .input100{
+.contact-form .input100 {
   width: 100%;
   margin: 0 10px;
-} 
+}
 
 .contact-form .row input,
 .contact-form .row textarea {
@@ -312,7 +326,7 @@ section.home {
   height: 150px;
 }
 
-.contact-form .row input[type='submit'] {
+.contact-form .row input[type="submit"] {
   background-color: var(--secondary-color);
   color: #fff;
   margin: 0;
@@ -326,7 +340,7 @@ section.home {
 .contact-info {
   width: 350px;
   background: #f1efef;
-  padding: 60px 40px 20px; 
+  padding: 60px 40px 20px;
 }
 
 .contact-info .info-box {
@@ -339,20 +353,16 @@ section.home {
   margin-right: 40px;
 }
 
-.contact-info .info-box .details h4{
+.contact-info .info-box .details h4 {
   color: var(--secondary-color);
 }
 
 .contact-info .info-box .details p,
-.contact-info .info-box .details a{
+.contact-info .info-box .details a {
   color: #111;
 }
 
 @media (max-width: 1068px) {
-  .home-img {
-    display: none;
-  }
-
   .logo {
     margin-left: 0.5rem;
     font-style: 1.5rem;
@@ -368,7 +378,6 @@ section.home {
 
   .services {
     grid-template-columns: repeat(2, 1fr);
-
   }
 
   .contact {
@@ -380,20 +389,20 @@ section.home {
     padding: 30px 30px 20px;
   }
 
- .contact-form .row {
-   flex-direction: column;
- } 
+  .contact-form .row {
+    flex-direction: column;
+  }
 
- .contact-form .input50,
- .contact-form .input100 {
-   width: 100%;
-   margin: 0;
- }
+  .contact-form .input50,
+  .contact-form .input100 {
+    width: 100%;
+    margin: 0;
+  }
 
- .contact-info {
-   width: 100%;
-   margin-top: 20px; 
-  padding: 30px 30px 20px;
+  .contact-info {
+    width: 100%;
+    margin-top: 20px;
+    padding: 30px 30px 20px;
   }
 }
 
@@ -405,5 +414,53 @@ section.home {
   .services .service {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
+
+  section.home {
+    padding: 10px;
+    flex-direction: column;
+  }
+  .home-img {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  .section {
+    padding: 50px;
+  }
+
+  .home-content {
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+  }
+
+  section {
+    padding: 0 20px;
+  }
 }
 
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
