@@ -5,17 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Creative Agency</title>
+    <title>Caraseli Agency</title>
   </head>
-  <body>
+  <body data-barba="wrapper">
+    <!-- TRANSITION -->
+    <ul class="transition">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <!-- TRANSITION -->
+
     <header>
-      <h4 class="logo">Creative Agency</h4>
+      <h4 class="logo">Caraseli Agency</h4>
       <div id="hamburger-wrapper" class="">
         <p class="burger"></p>
       </div>
-      <div class="navigation">
+      <nav class="navigation">
         <ul>
-          <li class="actualRoute">Home</li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="work.html">Work</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -42,10 +52,14 @@
             <img src="images/email.png" alt="" />
           </a>
         </div>
-      </div>
+      </nav>
     </header>
 
-    <section class="home">
+    <section
+      data-barba="container"
+      data-barba-namespace="home"
+      class="home animated-content"
+    >
       <img src="images/home-img.jpg" class="home-img" alt="" />
       <div class="home-content">
         <h1 class="index__title">
@@ -61,6 +75,15 @@
       </div>
     </section>
 
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- barbajs -->
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

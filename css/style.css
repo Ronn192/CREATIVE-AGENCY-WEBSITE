@@ -2,6 +2,7 @@
 @import url(./base.css);
 @import url(./menu.css);
 @import url(./form.css);
+@import url(./animation.css);
 
 git checkout -b headerWork :root {
   --primary-color: #f60f20;
